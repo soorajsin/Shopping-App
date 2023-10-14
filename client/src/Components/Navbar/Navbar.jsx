@@ -12,7 +12,7 @@ const Navbar = () => {
           <Toolbar>
             <div className="container">
               <div className="tab1">
-                <NavLink>
+                <NavLink to={"/"}>
                   <img src={SoorajLogo} alt="logo" />
                 </NavLink>
               </div>
@@ -21,10 +21,10 @@ const Navbar = () => {
                 <button>Search</button>
               </div>
               <div className="tab">
-                <NavLink className={"tabbutton"}>Login</NavLink>
+                <NavLink to={"/login"} className={"tabbutton"}>Login</NavLink>
               </div>
               <div className="tab">
-                <NavLink className={"tabbutton"}>
+                <NavLink to={"/product"} className={"tabbutton"}>
                   <i className="fa-solid fa-cart-shopping"></i>
                 </NavLink>
               </div>

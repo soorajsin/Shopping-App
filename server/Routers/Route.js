@@ -148,5 +148,47 @@ router.get("/validUser", authentication, async (req, res) => {
 })
 
 
+router.post("/addProduct", authentication, async (req, res) => {
+          // console.log(req.body);
+          try {
+                    const {
+                              data
+                    } = req.body;
+                    // console.log(data);
+
+                    if (!data) {
+                              res.status(201).json({
+                                        error: "data not found of product"
+                              })
+                    } else {
+                              const user = req.getData;
+
+                              if (!user) {
+                                        res.status(201).json({
+                                                  error: "User not found"
+                                        })
+                              } else {
+                                        // console.log(user);
+
+                                        user.Productdata.push(...data);
+
+                                        const saveData = await user.save();
+                                        // console.log(saveData);
+
+                                        res.status(201).json({
+                                                  status: 210,
+                                                  message: "Product Data added successfully done",
+                                                  saveData
+                                        })
+                              }
+                    }
+          } catch (error) {
+                    res.status(501).json({
+                              error: "Internal Server Error"
+                    })
+          }
+})
+
+
 
 module.exports = router;

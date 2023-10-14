@@ -1,0 +1,112 @@
+* {
+          margin: 0;
+          padding: 0;
+}
+
+body {
+          background-color: #f5f5f5;
+}
+
+.addProduct {
+          margin: 0 auto;
+          max-width: 1200px;
+          background-color: red;
+}
+
+.addProduct .container {
+          margin-top: 100px;
+          background-color: #fff;
+          padding: 20px;
+          width: 700px;
+          margin-left: 200px;
+          border-radius: 10px;
+          transition: 0.3s;
+          margin-bottom: 100px;
+}
+
+.addProduct .container:hover {
+          transform: scale(1.06);
+          box-shadow: 0 0 10px;
+          margin-top: 120px;
+}
+
+.addProduct .container h1 {
+          word-spacing: 40px;
+          margin-left: 100px;
+          color: rgb(224, 56, 56);
+          padding-top: 50px;
+          padding-bottom: 40px;
+          transition: 0.3s;
+}
+
+.addProduct .container:hover h1 {
+          transform: scale(1.06);
+          text-shadow: 0 0 10px;
+          margin-left: 110px;
+}
+
+.addProduct .container .form {
+          margin-bottom: 20px;
+          margin-left: 100px;
+}
+
+.addProduct .container .form label {
+          font-size: 30px;
+}
+
+.addProduct .container .form input {
+          width: 500px;
+          border-radius: 10px;
+          height: 40px;
+          font-size: 30px;
+          padding-left: 10px;
+          border-top: none;
+          background-color: #f5f5f5;
+}
+
+.addProduct .container .form input:focus {
+          background-color: #fff;
+}
+
+.addProduct .container .form textarea {
+          width: 500px;
+          padding-left: 10px;
+          font-size: 30px;
+          border-radius: 10px;
+          border-top: none;
+          background-color: #f5f5f5;
+}
+
+.addProduct .container .form textarea:focus {
+          background-color: #fff;
+}
+
+.addProduct .container .form .line {
+          width: 500px;
+          height: 2px;
+          background-color: rgb(226, 76, 76);
+          margin-bottom: 60px;
+          display: none;
+}
+
+.addProduct .container:hover .line {
+          display: block;
+}
+
+.addProduct .container .form button {
+          margin-bottom: 30px;
+          width: 510px;
+          border: none;
+          border-radius: 10px;
+          height: 40px;
+          font-size: 30px;
+          cursor: pointer;
+          background-color: #1976d2;
+          transition: 0.3s;
+}
+
+.addProduct .container .form button:hover {
+          color: #fff;
+          transform: scale(1.06);
+          box-shadow: 0 0 10px;
+}

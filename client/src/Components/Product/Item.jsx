@@ -1,8 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { ContextNavigate } from "../Context/ContextProvider";
 import "./Item.css";
+import { useNavigate } from "react-router-dom";
 
 const Item = () => {
+  const history = useNavigate();
+
   const { userdata, setUserData } = useContext(ContextNavigate);
   // console.log(userdata);
 
@@ -38,7 +41,25 @@ const Item = () => {
   return (
     <>
       <div className="product">
-        {/* Welcome to Product Email:- {userdata ? userdata.getData.email : ""} */}
+        <div className="container">
+          <div className="show">
+            {userdata
+              ? userdata.getData.Productdata.map((productdata, index) => (
+                  <div key={index} className="show-container">
+                    {index > 0 && <br />}
+                    {productdata.data}
+                  </div>
+                ))
+              : ""}
+          </div>
+          <div className="add">
+            <div className="addProduct">
+              <button onClick={() => history("/addProduct")}>
+                <i className="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

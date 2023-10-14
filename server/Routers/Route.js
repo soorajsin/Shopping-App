@@ -2,6 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const userdb = require("../Model/userSchema");
 const bcrypt = require("bcryptjs");
+const authentication = require("../Middleware/Authentication");
 
 
 
@@ -129,5 +130,23 @@ router.post("/login", async (req, res) => {
                     })
           }
 })
+
+
+
+router.get("/validUser", authentication, async (req, res) => {
+          // console.log("done");
+
+          // console.log(req.getData);
+
+          if (req.getData) {
+                    res.status(201).json({
+                              status: 210,
+                              message: "user authenticate done",
+                              getData: req.getData
+                    })
+          }
+})
+
+
 
 module.exports = router;

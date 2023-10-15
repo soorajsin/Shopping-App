@@ -8,20 +8,20 @@ body {
 }
 
 .product {
-          max-width: 1200px;
+          max-width: 1160px;
           margin: 100px auto;
 }
 
 .product .container {
           padding: 20px;
-          background-color: red;
+          /* background-color: red; */
 }
 
 .product .container .add {
           margin-top: 50px;
 }
 
-.product .container .add .addProduct button {
+.product .container .add .addProductItem button {
           width: 200px;
           height: 200px;
           border-radius: 10px;
@@ -30,18 +30,112 @@ body {
           transition: 0.3s;
 }
 
-.product .container .add .addProduct button:hover {
+.product .container .add .addProductItem button:hover {
           transform: scale(1.06);
           box-shadow: 0 0 10px;
 }
 
-.product .container .add .addProduct button i {
+.product .container .add .addProductItem button i {
           font-size: 130px;
           transition: 0.3s;
 }
 
-.product .container .add .addProduct button:hover i {
+.product .container .add .addProductItem button:hover i {
           color: rgb(219, 57, 57);
           transform: scale(1.06);
           text-shadow: 0 0 10px;
+}
+
+.product .container .show {
+          /* background-color: blue;    */
+          display: flex;
+          flex-wrap: wrap;
+}
+
+.product .container .show .show-container .data {
+          width: 300px;
+          background-color: #f7efef;
+          margin-bottom: 50px;
+          margin-right: 50px;
+          border-radius: 10px;
+          transition: 0.3s;
+          cursor: pointer;
+}
+
+.product .container .show .show-container .data:hover {
+          background-color: #fff;
+          transform: scale(1.06);
+          box-shadow: 0 0 10px;
+}
+
+.product .container .show .show-container .data img {
+          border-radius: 10px;
+          height: 200px;
+          width: 300px;
+          margin-bottom: 30px;
+          transition: 0.3s;
+}
+
+.product .container .show .show-container:hover img {
+          transform: scale(1.06);
+          box-shadow: 0 0 10px;
+}
+
+.product .container .show .show-container .data h2 {
+          padding-left: 10px;
+          word-wrap: break-word;
+          transition: 0.3s;
+}
+
+.product .container .show .show-container .data h2:hover {
+          transform: scale(1.06);
+          text-shadow: 0 0 10px;
+          color: rgb(218, 59, 59);
+          padding-left: 20px;
+}
+
+.product .container .show .show-container .data h3 {
+          padding-left: 10px;
+          padding-bottom: 30px;
+          word-wrap: break-word;
+}
+
+.product .container .show .show-container .data .priceShopping {
+          display: flex;
+}
+
+.product .container .show .show-container .data .priceShopping i {
+          padding-left: 170px;
+          font-size: 30px;
+          transition: 0.3s;
+          cursor: pointer;
+}
+
+.product .container .show .show-container .data .priceShopping i:hover {
+          transform: scale(1.06);
+          text-shadow: 0 0 10px;
+          color: rgb(223, 58, 58);
+}
+
+.product .container .show .show-container .data .priceShopping i:focus {
+          color: rgb(78, 228, 78);
+          cursor: pointer;
+}
+
+.product .container .show .show-container .data i {
+          padding-left: 250px;
+          padding-bottom: 20px;
+          font-size: 25px;
+          transition: 0.3s;
+          display: none;
+}
+
+.product .container .show .show-container:hover i {
+          display: block;
+}
+
+.product .container .show .show-container .data i:hover {
+          transform: scale(1.06);
+          text-shadow: 0 0 10px;
+          color: rgb(243, 41, 41);
 }

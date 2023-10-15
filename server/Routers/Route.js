@@ -187,6 +187,156 @@ router.post("/addProduct", authentication, async (req, res) => {
                               error: "Internal Server Error"
                     })
           }
+});
+
+
+router.delete("/deleteProduct", authentication, async (req, res) => {
+          // console.log(req.body);
+          try {
+                    const {
+                              productdata
+                    } = req.body;
+
+                    if (!productdata) {
+                              res.status(201).json({
+                                        error: "Not found product id"
+                              })
+                    } else {
+                              const user = req.getData;
+
+                              if (!user) {
+                                        res.status(201).json({
+                                                  error: "user not found"
+                                        })
+                              } else {
+                                        // console.log(user);
+
+                                        const entryField = user.Productdata.find((Productdata) => Productdata._id.toString() === productdata);
+
+                                        if (!entryField) {
+                                                  res.status(201).json({
+                                                            error: "entry field not found"
+                                                  })
+                                        } else {
+                                                  // console.log(entryField);
+
+                                                  user.Productdata = user.Productdata.filter((Productdata) => Productdata._id.toString() !== productdata);
+
+                                                  const updatedUser = await user.save();
+
+                                                  res.status(201).json({
+                                                            message: "Updated user successfully done",
+                                                            status: 210,
+                                                            updatedUser
+                                                  })
+                                        }
+                              }
+                    }
+          } catch (error) {
+                    res.status(501).json({
+                              error: "Internal Server Error"
+                    })
+          }
+})
+
+
+router.post("/goProduct", authentication, async (req, res) => {
+          try {
+                    // console.log(req.body);
+
+                    const {
+                              productdata
+                    } = req.body;
+
+                    if (!productdata) {
+                              res.status(201).json({
+                                        error: "Product id not found"
+                              })
+                    } else {
+                              const user = req.getData;
+
+                              if (!user) {
+                                        res.status(201).json({
+                                                  error: "user not found"
+                                        })
+                              } else {
+                                        const entryField = user.Productdata.find((Productdata) => Productdata._id.toString() === productdata);
+
+                                        if (!entryField) {
+                                                  res.status(201).json({
+                                                            error: "entry field not found"
+                                                  })
+                                        } else {
+                                                  // console.log(entryField);
+
+                                                  user.ProductShow.push(entryField);
+
+                                                  const updatedUser = await user.save();
+
+                                                  // console.log(updatedUser);
+
+                                                  res.status(201).json({
+                                                            message: "Product add successfully done",
+                                                            status: 210,
+                                                            updatedUser
+                                                  })
+                                        }
+                              }
+                    }
+          } catch (error) {
+                    res.status(501).json({
+                              error: "Internal Server Error"
+                    })
+          }
+});
+
+
+router.delete("/deleteProductShow", authentication, async (req, res) => {
+          try {
+                    // console.log(req.body);
+
+                    const {
+                              productShow
+                    } = req.body;
+
+                    if (!productShow) {
+                              res.status(201).json({
+                                        error: "productShow not found"
+                              })
+                    } else {
+                              const user = req.getData;
+
+                              if (!user) {
+                                        res.status(201).json({
+                                                  error: "user not found"
+                                        })
+                              } else {
+                                        const entryField = user.ProductShow.find((ProductShow) => ProductShow._id.toString() === productShow);
+
+                                        if (!entryField) {
+                                                  res.status(201).json({
+                                                            error: "entryField not found"
+                                                  })
+                                        } else {
+                                                  // console.log(entryField);
+
+                                                  user.ProductShow = user.ProductShow.filter((ProductShow) => ProductShow._id.toString() !== productShow);
+
+                                                  const updatedUser = await user.save();
+
+                                                  res.status(201).json({
+                                                            message: "data deleted",
+                                                            status: 210,
+                                                            updatedUser
+                                                  })
+                                        }
+                              }
+                    }
+          } catch (error) {
+                    res.status(501).json({
+                              error: "Internal Server Error"
+                    })
+          }
 })
 
 

@@ -49,6 +49,21 @@ const userSchema = new mongoose.Schema({
                     url: {
                               type: String
                     }
+          }],
+
+          ProductShow: [{
+                    name: {
+                              type: String
+                    },
+                    title: {
+                              type: String
+                    },
+                    price: {
+                              type: Number
+                    },
+                    url: {
+                              type: String
+                    }
           }]
 });
 

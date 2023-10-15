@@ -100,3 +100,8 @@
           transform: scale(1.06);
           text-shadow: 0 0 10px;
 }
+
+.navbar .container .tabFinished .avatar {
+          text-decoration: none;
+          font-size: 30px;
+}

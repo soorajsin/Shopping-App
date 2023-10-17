@@ -136,6 +136,15 @@
           display: block;
 }
 
+.navbar .container .tabFinished .avatar #avatar-manu .manuEmail {
+          padding-bottom: 20px;
+          text-align: center;
+          font-size: 30px;
+          color: rgb(206, 54, 54);
+          word-wrap: break-word;
+          padding-right: 10px;
+}
+
 .navbar .container .tabFinished .avatar #avatar-manu .manuItem {
           font-size: 30px;
           flex: 1;

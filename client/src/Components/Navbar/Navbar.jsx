@@ -97,6 +97,9 @@ const Navbar = () => {
                   <div id="avatar-manu">
                     {userdata ? (
                       <>
+                        <div className="manuEmail">
+                          {userdata.getData.email}
+                        </div>
                         <div className="manu">
                           <NavLink to={"/"} className="manuItem">
                             Home

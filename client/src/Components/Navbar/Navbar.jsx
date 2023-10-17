@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
 import { AppBar, Avatar, Toolbar } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ import config from "../../config";
 const Navbar = () => {
   const url = config.backendURL;
   const history = useNavigate();
-  const { userdata} = useContext(ContextNavigate);
+  const { userdata } = useContext(ContextNavigate);
 
   const signOut = async () => {
     const token = await localStorage.getItem("userDataToken");
@@ -31,6 +31,14 @@ const Navbar = () => {
       console.log("not remove token");
     }
   };
+
+  useEffect(() => {
+    if (userdata) {
+      console.log("user find");
+    } else if (!navigator.onLine) {
+      window.location.reload();
+    }
+  }, [userdata]);
 
   // Conditional rendering based on user authorization
   const renderAuthorizedNavbar = () => {

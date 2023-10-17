@@ -27,7 +27,7 @@ const Navbar = () => {
     if (res.status === 210) {
       setUserData(res);
     } else {
-      history("*");
+      // history("*");
     }
   };
 
@@ -58,101 +58,96 @@ const Navbar = () => {
 
   const ifUserValid = () => {
     return (
-      <>
-        <div className="container">
-          <div className="tab1">
-            <NavLink to={"/"}>
-              <img src={SoorajLogo} alt="logo" />
-            </NavLink>
-          </div>
-          <div className="tab">
-            <input type="text" placeholder="Search Product here..." />
-            <button>Search</button>
-          </div>
-          <div className="tab">
-            <NavLink to={"/login"} className={"tabbutton"}>
-              Login
-            </NavLink>
-          </div>
-          <div className="tab">
-            <NavLink to={"/product"} className={"tabbutton"}>
-              <i className="fa-solid fa-cart-shopping"></i>
-            </NavLink>
-          </div>
-          <div className="tabFinished">
-            <NavLink className={"avatar"}>
-              <Avatar className="avatar-main">
-                {userdata ? userdata.getData.email.charAt(0).toUpperCase() : ""}
-              </Avatar>
-              <div id="avatar-manu">
-                <div className="manuEmail">{userdata.getData.email}</div>
-                <div className="manu">
-                  <NavLink to={"/"} className="manuItem">
-                    Home
-                  </NavLink>
-                  <NavLink to={"/product"} className="manuItem">
-                    Product
-                  </NavLink>
-                  <NavLink to={"/login"} className="manuItem">
-                    Login
-                  </NavLink>
-                  <NavLink onClick={signOut} className="manuItem">
-                    Sign Out
-                  </NavLink>
-                </div>
-              </div>
-            </NavLink>
-          </div>
+      <div className="container">
+        <div className="tab1">
+          <NavLink to={"/"}>
+            <img src={SoorajLogo} alt="logo" />
+          </NavLink>
         </div>
-        ;
-      </>
+        <div className="tab">
+          <input type="text" placeholder="Search Product here..." />
+          <button>Search</button>
+        </div>
+        <div className="tab">
+          <NavLink to={"/login"} className={"tabbutton"}>
+            Login
+          </NavLink>
+        </div>
+        <div className="tab">
+          <NavLink to={"/product"} className={"tabbutton"}>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </NavLink>
+        </div>
+        <div className="tabFinished">
+          <NavLink className={"avatar"}>
+            <Avatar className="avatar-main">
+              {userdata ? userdata.getData.email.charAt(0).toUpperCase() : ""}
+            </Avatar>
+            <div id="avatar-manu">
+              <div className="manuEmail">{userdata.getData.email}</div>
+              <div className="manu">
+                <NavLink to={"/"} className="manuItem">
+                  Home
+                </NavLink>
+                <NavLink to={"/product"} className="manuItem">
+                  Product
+                </NavLink>
+                <NavLink to={"/login"} className="manuItem">
+                  Login
+                </NavLink>
+                <NavLink onClick={signOut} className="manuItem">
+                  Sign Out
+                </NavLink>
+              </div>
+            </div>
+          </NavLink>
+        </div>
+      </div>
     );
   };
 
   const elseNotValid = () => {
     return (
-      <>
-        <div className="container">
-          <div className="tab1">
-            <NavLink to={"/"}>
-              <img src={SoorajLogo} alt="logo" />
-            </NavLink>
-          </div>
-          <div className="tab">
-            <input type="text" placeholder="Search Product here..." />
-            <button>Search</button>
-          </div>
-          <div className="tab">
-            <NavLink to={"/login"} className={"tabbutton"}>
-              Login
-            </NavLink>
-          </div>
-          <div className="tab">
-            <NavLink to={"/product"} className={"tabbutton"}>
-              <i className="fa-solid fa-cart-shopping"></i>
-            </NavLink>
-          </div>
-          <div className="tabFinished">
-            <NavLink className={"avatar"}>
-              <Avatar className="avatar-main"></Avatar>
-              <div id="avatar-manu">
-                {/* <div className="manuEmail">{userdata.getData.email}</div> */}
-                <div className="manu">
-                  <NavLink to={"/"} className="manuItem">
-                    Home
-                  </NavLink>
-                  <NavLink to={"/product"} className="manuItem">
-                    Product
-                  </NavLink>
-                  <NavLink to={"/login"} className="manuItem">
-                    Login
-                  </NavLink>
-                </div>
-              </div>
-            </NavLink>
-          </div>
+      <div className="container">
+        <div className="tab1">
+          <NavLink to={"/"}>
+            <img src={SoorajLogo} alt="logo" />
+          </NavLink>
         </div>
-      </>
+        <div className="tab">
+          <input type="text" placeholder="Search Product here..." />
+          <button>Search</button>
+        </div>
+        <div className="tab">
+          <NavLink to={"/login"} className={"tabbutton"}>
+            Login
+          </NavLink>
+        </div>
+        <div className="tab">
+          <NavLink to={"/product"} className={"tabbutton"}>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </NavLink>
+        </div>
+        <div className="tabFinished">
+          <NavLink className={"avatar"}>
+            <Avatar className="avatar-main"></Avatar>
+            <div id="avatar-manu">
+              {/* <div className="manuEmail">{userdata.getData.email}</div> */}
+              <div className="manu">
+                <NavLink to={"/"} className="manuItem">
+                  Home
+                </NavLink>
+                <NavLink to={"/product"} className="manuItem">
+                  Product
+                </NavLink>
+                <NavLink to={"/login"} className="manuItem">
+                  Login
+                </NavLink>
+              </div>
+            </div>
+          </NavLink>
+        </div>
+      </div>
     );
   };
 

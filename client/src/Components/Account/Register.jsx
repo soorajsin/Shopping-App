@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./mix.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import config from "../.././config";
 
 const Register = () => {
-  const url = "http://localhost:4000";
+  const url = config.backendURL;
 
   const history = useNavigate();
 

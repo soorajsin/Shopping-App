@@ -1,0 +1,42 @@
+* {
+          margin: 0;
+          padding: 0;
+}
+
+body {
+          background-color: #f5f5f5;
+}
+
+.error {
+          max-width: 1160px;
+          margin: 0 auto;
+}
+
+.error .containerError {
+          text-align: center;
+}
+
+.error .containerError img {
+          width: 100%;
+          border-radius: 10px;
+}
+
+.error .containerError h1 {
+          padding-top: 20px;
+          color: rgb(201, 86, 86);
+}
+
+.error .containerError .return {
+          padding-top: 30px;
+          font-size: 25px;
+          margin-bottom: 50px;
+}
+
+.error .containerError .return .errorNav {
+          text-decoration: none;
+}
+
+.error .containerError .return .errorNav:hover {
+          color: rgb(201, 55, 55);
+          text-decoration: underline;
+}

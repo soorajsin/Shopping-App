@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./mix.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import config from "../../config";
 
 const Login = () => {
   const history = useNavigate();
 
-  const url = "http://localhost:4000";
+  const url = config.backendURL;
 
   const [inp, setInp] = useState({
     email: "",

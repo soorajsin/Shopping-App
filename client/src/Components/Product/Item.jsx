@@ -2,14 +2,17 @@ import React, { useContext, useEffect } from "react";
 import { ContextNavigate } from "../Context/ContextProvider";
 import "./Item.css";
 import { useNavigate } from "react-router-dom";
+import config from "../../config";
 
 const Item = () => {
+  const url = config.backendURL;
+
   const history = useNavigate();
 
   const { userdata, setUserData } = useContext(ContextNavigate);
   // console.log(userdata);
 
-  const url = "http://localhost:4000";
+  // const url = "http://localhost:4000";
 
   const product = async () => {
     const token = await localStorage.getItem("userDataToken");
@@ -31,6 +34,7 @@ const Item = () => {
       setUserData(res);
     } else {
       console.log("user not authorized");
+      history("*");
     }
   };
 
@@ -57,7 +61,9 @@ const Item = () => {
     if (res.status === 210) {
       // console.log(res);
     } else {
-      alert("You are not logged in");
+      // alert("You are not logged in");
+      console.log("not delete product");
+      history("*");
     }
   };
 
@@ -76,10 +82,15 @@ const Item = () => {
     const res = await data.json();
     // console.log(res);
 
-    if (res.status === 210) {
-      console.log(res);
+    if (navigator.onLine) {
+      if (res.status === 210) {
+        // console.log(res);
+      } else {
+        console.log("not added product");
+        history("*");
+      }
     } else {
-      console.log("not added product");
+      window.location.onLine();
     }
   };
 

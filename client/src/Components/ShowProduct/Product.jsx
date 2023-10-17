@@ -1,9 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ContextNavigate } from "../Context/ContextProvider";
 import "./ProductShow.css";
+import config from "../../config";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
-  const url = "http://localhost:4000";
+  const url = config.backendURL;
+
+  const history = useNavigate();
 
   const { userdata, setUserData } = useContext(ContextNavigate);
   // console.log(userdata);
@@ -23,11 +27,17 @@ const Product = () => {
     const res = await data.json();
     // console.log(res);
 
-    if (res.status === 210) {
-      // console.log(res);
-      setUserData(res);
+    if (navigator.onLine) {
+      if (res.status === 210) {
+        // console.log(res);
+        setUserData(res);
+      } else {
+        console.log("user not found");
+        history("*");
+      }
     } else {
-      console.log("user not found");
+      window.location.reload();
+      // history("*");
     }
   };
 
@@ -55,6 +65,7 @@ const Product = () => {
       console.log(res);
     } else {
       console.log("not delete");
+      history("*");
     }
   };
 

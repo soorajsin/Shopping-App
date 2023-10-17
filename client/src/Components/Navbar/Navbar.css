@@ -11,9 +11,10 @@
 .navbar .container {
           padding-top: 20px;
           max-width: 1200px;
+          height: 67px;
           margin: 0 auto;
           display: flex;
-          background-color: rgb(228, 12, 12);
+          /* background-color: rgb(228, 12, 12); */
 }
 
 .navbar .container .tab1 {
@@ -103,5 +104,49 @@
 
 .navbar .container .tabFinished .avatar {
           text-decoration: none;
+}
+
+.navbar .container .tabFinished .avatar .avatar-main {
           font-size: 30px;
+          color: red;
+          cursor: pointer;
+          background-color: #fff;
+          transition: 0.3s;
+}
+
+.navbar .container .tabFinished .avatar .avatar-main:hover {
+          transform: scale(1.06);
+          text-shadow: 0 0 10px;
+}
+
+.navbar .container .tabFinished .avatar #avatar-manu {
+          display: none;
+          width: 250px;
+          background-color: #fff;
+          border-radius: 10px;
+          padding-left: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          flex-wrap: wrap;
+          position: absolute;
+          right: 0px;
+}
+
+.navbar .container .tabFinished .avatar:hover #avatar-manu {
+          display: block;
+}
+
+.navbar .container .tabFinished .avatar #avatar-manu .manuItem {
+          font-size: 30px;
+          flex: 1;
+          cursor: pointer;
+          padding-bottom: 20px;
+          text-decoration: none;
+          min-width: 150px;
+          display: flex;
+          flex-direction: row;
+}
+
+.navbar .container .tabFinished .avatar #avatar-manu .manuItem:hover {
+          color: rgb(218, 59, 59);
 }

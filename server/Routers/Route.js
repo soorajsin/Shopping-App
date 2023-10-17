@@ -337,8 +337,43 @@ router.delete("/deleteProductShow", authentication, async (req, res) => {
                               error: "Internal Server Error"
                     })
           }
-})
+});
 
+
+router.post("/signOut", authentication, async (req, res) => {
+          try {
+                    const user = req.getData;
+
+                    if (!user) {
+                              res.status(201).json({
+                                        error: "user not found"
+                              })
+                    } else {
+                              // console.log(user);
+
+                              const tokenToremove = user.tokens.map((token) => token._id);
+
+                              // console.log(tokenToremove);
+
+
+                              // Remove all tokens from the user's tokens array
+                              user.tokens = [];
+
+                              // Save the updated user object to remove the tokens
+                              const updatedUser = await user.save();
+
+                              res.status(201).json({
+                                        status: 210,
+                                        message: "All tokens removed successfully",
+                                        updatedUser,
+                              });
+                    }
+          } catch (error) {
+                    res.status(501).json({
+                              error: "Internal Server error"
+                    })
+          }
+})
 
 
 module.exports = router;

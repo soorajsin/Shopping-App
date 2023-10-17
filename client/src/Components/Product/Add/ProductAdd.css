@@ -10,7 +10,7 @@ body {
 .addProduct {
           margin: 0 auto;
           max-width: 1200px;
-          background-color: red;
+          /* background-color: red; */
 }
 
 .addProduct .container {

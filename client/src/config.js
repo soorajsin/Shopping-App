@@ -1,5 +1,5 @@
 const config = {
-          backendURL: "http://localhost:4000"
+          backendURL: "https://shopping-app-wheat-chi.vercel.app/"
 }
 
 export default config;

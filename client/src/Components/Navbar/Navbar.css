@@ -42,7 +42,7 @@
           display: flex;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
           .navbar .container .tab {
                     margin-left: 40px;
                     font-size: 30px;
@@ -61,7 +61,7 @@
           padding-left: 10px;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:950px) {
           .navbar .container .tab input {
                     margin-top: 5px;
                     width: 300px;
@@ -118,7 +118,7 @@
           cursor: pointer;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:950px) {
           .navbar .container .tabFinished {
                     /* position: relative;
                     right: 20px;

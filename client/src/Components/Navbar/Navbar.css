@@ -42,6 +42,15 @@
           display: flex;
 }
 
+@media screen and (max-width: 950px) {
+          .navbar .container .tab {
+                    margin-left: 50px;
+                    font-size: 30px;
+                    display: flex;
+          }
+}
+
+
 .navbar .container .tab input {
           margin-top: 5px;
           width: 400px;
@@ -95,6 +104,16 @@
           margin-left: 200px;
           transition: 0.3s;
           cursor: pointer;
+}
+
+@media screen and (max-width:950px) {
+          .navbar .container .tabFinished {
+                    position: relative;
+                    right: 10px;
+                    margin-left: 70px;
+                    transition: 0.3s;
+                    cursor: pointer;
+          }
 }
 
 .navbar .container .tabFinished:hover {

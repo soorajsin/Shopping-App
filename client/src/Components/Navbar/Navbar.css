@@ -61,6 +61,18 @@
           padding-left: 10px;
 }
 
+@media screen and (max-width:900px) {
+          .navbar .container .tab input {
+                    margin-top: 5px;
+                    width: 300px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 30px;
+                    padding-left: 10px;
+          }
+}
+
 .navbar .container .tab input:focus {
           border-top: none;
 }
@@ -108,9 +120,10 @@
 
 @media screen and (max-width:900px) {
           .navbar .container .tabFinished {
-                    position: relative;
+                    /* position: relative;
                     right: 20px;
-                    left: 50px;
+                    left: 50px; */
+                    margin-left: 70px;
                     transition: 0.3s;
                     cursor: pointer;
           }

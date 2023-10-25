@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 
 
 app.get("/", (req, res) => {
-          res.json("Server started json format");
+          res.json("Server started");
 });
 
 

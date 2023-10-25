@@ -42,13 +42,7 @@
           display: flex;
 }
 
-@media screen and (max-width: 950px) {
-          .navbar .container .tab {
-                    margin-left: 40px;
-                    font-size: 30px;
-                    display: flex;
-          }
-}
+
 
 
 .navbar .container .tab input {
@@ -61,17 +55,6 @@
           padding-left: 10px;
 }
 
-@media screen and (max-width:950px) {
-          .navbar .container .tab input {
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 40px;
-                    border-radius: 10px;
-                    border: none;
-                    font-size: 30px;
-                    padding-left: 10px;
-          }
-}
 
 .navbar .container .tab input:focus {
           border-top: none;
@@ -118,16 +101,6 @@
           cursor: pointer;
 }
 
-@media screen and (max-width:950px) {
-          .navbar .container .tabFinished {
-                    /* position: relative;
-                    right: 20px;
-                    left: 50px; */
-                    margin-left: 70px;
-                    transition: 0.3s;
-                    cursor: pointer;
-          }
-}
 
 .navbar .container .tabFinished:hover {
           transform: scale(1.06);
@@ -190,4 +163,33 @@
 
 .navbar .container .tabFinished .avatar #avatar-manu .manuItem:hover {
           color: rgb(218, 59, 59);
+}
+
+
+
+@media screen and (max-width: 1000px) {
+          .navbar .container .tab {
+                    margin-left: 40px;
+                    font-size: 30px;
+                    display: flex;
+          }
+
+          .navbar .container .tab input {
+                    margin-top: 5px;
+                    width: 300px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 30px;
+                    padding-left: 10px;
+          }
+
+          .navbar .container .tabFinished {
+                    /* position: relative;
+                    right: 20px;
+                    left: 50px; */
+                    margin-left: 70px;
+                    transition: 0.3s;
+                    cursor: pointer;
+          }
 }

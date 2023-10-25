@@ -42,9 +42,9 @@
           display: flex;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
           .navbar .container .tab {
-                    margin-left: 50px;
+                    margin-left: 40px;
                     font-size: 30px;
                     display: flex;
           }
@@ -106,11 +106,11 @@
           cursor: pointer;
 }
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:900px) {
           .navbar .container .tabFinished {
                     position: relative;
-                    right: 10px;
-                    margin-left: 70px;
+                    right: 20px;
+                    left: 50px;
                     transition: 0.3s;
                     cursor: pointer;
           }
